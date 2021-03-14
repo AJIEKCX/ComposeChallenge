@@ -20,4 +20,14 @@
     <string name="login_license_text">By clicking below, you agree to our Terms of use and contest to our Privacy Policy</string>
     <string name="login_button">@string/welcome_login_button</string>
 
+    <string name="bottom_nav_home">Home</string>
+    <string name="bottom_nav_favourites">Favourites</string>
+    <string name="bottom_nav_profile">Profile</string>
+    <string name="bottom_nav_cart">Cart</string>
+    
+    <string name="home_search_label">Search</string>
+    <string name="home_browse_themes_title">Browse themes</string>
+    <string name="home_design_your_home_garden_title">Design your home garden</string>
+    <string name="home_description">This is a description</string>
+
 </resources>

@@ -24,9 +24,11 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
+import com.example.androiddevchallenge.ui.screen.HomeScreen
 import com.example.androiddevchallenge.ui.screen.LogInScreen
 import com.example.androiddevchallenge.ui.screen.WelcomeScreen
 import com.example.androiddevchallenge.ui.theme.MyTheme
+import dev.chrisbanes.accompanist.insets.ProvideWindowInsets
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +44,9 @@ class MainActivity : AppCompatActivity() {
 
 @Composable
 fun MyApp() {
-    LogInScreen()
+    ProvideWindowInsets {
+        HomeScreen()
+    }
 }
 
 @Preview("Light Theme", widthDp = 360, heightDp = 640)
