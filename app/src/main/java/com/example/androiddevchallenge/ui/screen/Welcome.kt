@@ -16,7 +16,7 @@ import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.ui.widget.BloomButton
 
 @Composable
-fun WelcomeScreen() {
+fun WelcomeScreen(welcomeCompleted: () -> Unit) {
     Surface(Modifier.fillMaxSize(), color = MaterialTheme.colors.primary) {
         ConstraintLayout {
             val (backgroundImage,
@@ -69,7 +69,7 @@ fun WelcomeScreen() {
                 style = MaterialTheme.typography.subtitle1
             )
             BloomButton(
-                onClick = { /*TODO*/ },
+                onClick = welcomeCompleted,
                 modifier = Modifier
                     .constrainAs(registerButton) {
                         start.linkTo(parent.start)
@@ -78,7 +78,7 @@ fun WelcomeScreen() {
                     }
             ) { Text(stringResource(R.string.welcome_create_account_button)) }
             TextButton(
-                onClick = { /*TODO*/ },
+                onClick = welcomeCompleted,
                 modifier = Modifier
                     .constrainAs(loginButton) {
                         start.linkTo(parent.start)

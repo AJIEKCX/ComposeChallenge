@@ -26,7 +26,7 @@ import com.example.androiddevchallenge.ui.widget.BloomButton
 import com.example.androiddevchallenge.ui.widget.BloomTextField
 
 @Composable
-fun LogInScreen() {
+fun LogInScreen(loginSucceed: () -> Unit) {
     val focusManager = LocalFocusManager.current
     val passwordFocusRequest = remember { FocusRequester() }
     var email by remember { mutableStateOf("") }
@@ -64,7 +64,7 @@ fun LogInScreen() {
                 style = MaterialTheme.typography.body2,
                 textAlign = TextAlign.Center
             )
-            BloomButton(onClick = { /*TODO*/ }) {
+            BloomButton(onClick = loginSucceed) {
                 Text(text = stringResource(R.string.login_button))
             }
         }

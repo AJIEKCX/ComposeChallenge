@@ -18,15 +18,10 @@ package com.example.androiddevchallenge
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
-import com.example.androiddevchallenge.ui.screen.HomeScreen
-import com.example.androiddevchallenge.ui.screen.LogInScreen
-import com.example.androiddevchallenge.ui.screen.WelcomeScreen
+import com.example.androiddevchallenge.ui.NavGraph
 import com.example.androiddevchallenge.ui.theme.MyTheme
 import dev.chrisbanes.accompanist.insets.ProvideWindowInsets
 
@@ -45,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 @Composable
 fun MyApp() {
     ProvideWindowInsets {
-        HomeScreen()
+        NavGraph()
     }
 }
 
