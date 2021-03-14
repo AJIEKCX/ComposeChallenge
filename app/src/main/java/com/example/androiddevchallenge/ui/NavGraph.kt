@@ -36,7 +36,6 @@ object MainDestinations {
 @Composable
 fun NavGraph(startDestination: String = MainDestinations.WELCOME_ROUTE) {
     val navController = rememberNavController()
-
     val actions = remember(navController) { MainActions(navController) }
     NavHost(
         navController = navController,

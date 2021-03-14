@@ -56,6 +56,7 @@ fun HomeScreen() {
             .navigationBarsPadding(),
     ) {
         HomeContent(
+            Modifier.systemBarsPadding(),
             flowerThemes,
             flowers,
             searchText,
@@ -66,17 +67,18 @@ fun HomeScreen() {
 
 @Composable
 private fun HomeContent(
+    modifier: Modifier,
     flowerThemes: List<FlowerTheme>,
     flowers: List<Flower>,
     searchText: String,
     onSearchChanged: (String) -> Unit,
 ) {
     LazyColumn(
+        modifier,
         contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 16.dp)
     ) {
         item {
             BloomTextField(
-                modifier = Modifier.systemBarsPadding(),
                 label = { Text(stringResource(R.string.home_search_label)) },
                 value = searchText,
                 onValueChange = onSearchChanged,
@@ -127,7 +129,7 @@ private fun ThemeCard(flowerTheme: FlowerTheme) {
             .size(136.dp)
             .padding(end = 8.dp, bottom = 8.dp),
         shape = MaterialTheme.shapes.small,
-        backgroundColor = MaterialTheme.colors.surface,
+        backgroundColor = MaterialTheme.colors.background,
     ) {
         Column {
             Image(
