@@ -24,6 +24,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
+import com.example.androiddevchallenge.ui.screen.LogInScreen
 import com.example.androiddevchallenge.ui.screen.WelcomeScreen
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
 @Composable
 fun MyApp() {
-    WelcomeScreen()
+    LogInScreen()
 }
 
 @Preview("Light Theme", widthDp = 360, heightDp = 640)

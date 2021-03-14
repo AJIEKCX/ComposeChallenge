@@ -13,4 +13,11 @@
     <string name="welcome_title">Beautiful home garden solution</string>
     <string name="welcome_create_account_button">Create account</string>
     <string name="welcome_login_button">Log in</string>
+
+    <string name="login_title">Log in with email</string>
+    <string name="login_email_label">E-mail</string>
+    <string name="login_password_label">Password (8+ characters)</string>
+    <string name="login_license_text">By clicking below, you agree to our Terms of use and contest to our Privacy Policy</string>
+    <string name="login_button">@string/welcome_login_button</string>
+
 </resources>
